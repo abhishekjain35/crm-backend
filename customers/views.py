@@ -5,7 +5,6 @@ from rest_framework.response import Response
 from .models import Customer
 
 
-# Create your views here.
 class CustomerViewSet(viewsets.ModelViewSet):
   queryset = Customer.objects.all()
   serializer_class = CustomerSerializer
@@ -23,5 +22,5 @@ class CustomerViewSet(viewsets.ModelViewSet):
       customer.status = 'converted'
       customer.save()
       return Response({'message': 'Customer promoted'})
-    return Response({'error': 'Not a lead'}, status=status.HTTP_400_BAD_REQUEST)
+    return Response({'error': 'Not a lead lol'}, status=status.HTTP_400_BAD_REQUEST)
   
